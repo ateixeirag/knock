@@ -71,6 +71,27 @@ class Knocker(object):
             if self.delay and i != last_index:
                 time.sleep(self.delay)
 
+print()
+print(sys.argv[1:])
+print(len(sys.argv[1:]))
+print()
+
+base_port=['3359', '8521', '4785']
+
+ip_str=input('ip: ')
+port_str=input('port: ')
+print(ip_str,port_str)
+
+data_list=port_str.split(",")
+data_list.insert(0, ip_str)
+print(data_list)
+
+if len(sys.argv[1:])==0:
+    sys.argv=['knock','190.97.171.32', '3359', '8521', '4785']
+
+print()
+print(sys.argv[1:])
+print(len(sys.argv[1:]))
 
 if __name__ == '__main__':
     Knocker(sys.argv[1:]).knock()

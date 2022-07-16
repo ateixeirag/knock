@@ -1,0 +1,2 @@
+python knock.py
+pause
